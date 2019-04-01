@@ -191,7 +191,7 @@ end
 
 def big_shoe_rebounds
   the_biggest_shoe_size = nil
-  points = nil
+  rebounds = nil
   game_hash.each do |team, information|
     information[:players].each do |player, stats|
       if the_biggest_shoe_size == nil
@@ -205,10 +205,10 @@ def big_shoe_rebounds
   game_hash.each do |team, information|
     information[:players].each do |player, stats|
       if stats[:shoe] == the_biggest_shoe_size
-        points = stats[:points]
+        rebounds = stats[:rebounds]
         break
       end
     end
   end
-  points
+  rebounds
 end
